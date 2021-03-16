@@ -51,7 +51,11 @@ function(configureGCClassic)
     )
     gc_pretty_print(VARIABLE CUSTOMMECH IS_BOOLEAN)
     if(${CUSTOMMECH})
-        set(MECH "custom")
+#-------------------------------------------------------------------
+# Kludge for KPP development, can remove this later (bmy, 3/16/21)
+#        set(MECH "custom")
+#-------------------------------------------------------------------
+        set(MECH "aerochem")
     else()
         set(MECH "fullchem")
     endif()
